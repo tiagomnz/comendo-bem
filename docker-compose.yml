@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+ comendo-bem-db:
+   container_name: comendo-bem-db
+   image: mysql
+   command: --default-authentication-plugin=mysql_native_password
+   restart: always
+   ports:
+     - 3389:3306
+   environment:
+     MYSQL_ROOT_PASSWORD: exemplo
+     MYSQL_DATABASE: comendo-bem-db
+     MYSQL_USER: user
+     MYSQL_PASSWORD: password
